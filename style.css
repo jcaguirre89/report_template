@@ -1,0 +1,44 @@
+p {
+    margin: 5px;
+}
+
+table-1 {
+    padding: 15px;
+}
+#deetken-logo {
+    width: 250px;
+    height: 100px;
+}
+
+.date-logo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.client {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer {
+    font-size: 0.7em;
+    text-align: center;
+    border-top: 0.3px solid black;
+    padding: 5px;
+}
+
+.title {
+    text-align: center;
+}
+
+.name-title {
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+}
+
+.holdings-table {
+    border: 0.3px solid black;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>placeholder title</title>
+    <link rel="stylesheet" href="style.css">
+    
+ 
+</head>
+
+<body>
+    
+    
+    <div class='date-logo'>
+    
+    <p>{{date_send}}</p>
+    
+    </div>
+    
+    
+    <div class='client'>
+        <div class='client-info'>
+        <p>{{name}}</p>
+        <p>{{address}}</p>
+        <p>{{city}}, {{state}}, {{zip}}</p>
+        <p>{{country}}</p>
+        <p> Email: {{email}}</p>
+        </div>
+        
+        <div class='account-info'>
+        <p>Client: {{client_id}}</p>
+        <p>Account: {{account_id}}</p>
+        <p>Account Type: {{account_type}}</p>
+        </div>
+        
+    </div>
+    
+    <div class='title'>
+    <h2>Quarterly Account Statement</h2>
+    <h3 class='name-title'>{{name}}</h3>
+    </div>
+    
+    <h4>Holdings summary as of {{date_report}}</h4>
+    <p>All amounts in CAD</p>
+    <table class='holdings-table'>
+        <tr>
+        {% for item in holdings_headers %}
+        <th>{{item}}</th>
+        {% endfor %}
+        </tr>
+        
+        {% for row in holdings_table %}
+            <tr>
+            {% for item in row %}
+                <td>{{item}}</td>
+            {% endfor %}
+            </tr>
+        {% endfor %}
+        <tr>
+            <td>Total</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{{total_bv}}</td>
+            <td>{{total_mv}}</td>
+        </tr>
+    </table>
+    
+    <h4>Account summary for the period ending {{date_report}}</h4>
+    <table>
+        <tr>
+            {% for item in account_headers %}
+            <th>{{item}}</th>
+            {% endfor %}
+        </tr>
+        
+        <tr>
+            <th>{{account_index.0}}</th>
+            {% for item in account_table.0 %}
+                <td>{{item}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>{{account_index.1}}</th>
+            {% for item in account_table.1 %}
+                <td>{{item}}</td>
+            {% endfor %}
+        </tr>
+        <tr>
+            <th>{{account_index.2}}</th>
+            {% for item in account_table.2 %}
+                <td>{{item}}</td>
+            {% endfor %}
+        </tr>
+           
+    </table>
+    
+    <h4>Personal rate of return</h4>
+    <table>
+    <tr>
+    <td>
+    table 3   
+    </td>    
+    </tr>
+    </table>
+    
+    
+    <div class='disclosures'>
+    <p>Your dealing...</p>
+    
+    </div>
+    
+    <ol class='footnotes'>
+        <li>A related and..</li>
+        <li>A related and..</li>
+        <li>A related and..</li>
+        <li>A related and..</li>
+        <li>A related and..</li>
+        
+        
+    </ol>
+
+
+    <div class='footer'>
+    <b>Deetken Impact</b> 501 &mdash; 1755 West Broadway, Vancouver BC V6J 4S5 Tel. +1-604-731-4424 Fax. +1-604-736-2246
+    </div>
+    
+</body>
+</html>
